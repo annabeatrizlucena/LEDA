@@ -55,9 +55,8 @@ public class MetodosRecursivos {
 	}
 
 	public long potenciaDe2(int expoente) {
-		long result = 0;
+		long result = 1;
 		if (expoente == 0) {
-			result = 1;
 		} else {
 			result = 2 * potenciaDe2(expoente - 1);
 		}
@@ -67,7 +66,6 @@ public class MetodosRecursivos {
 	public double progressaoAritmetica(double termoInicial, double razao, int n) {
 		double result = termoInicial;
 		if (n == 1) {
-			return result;
 		} else {
 			result = progressaoAritmetica(termoInicial + razao, razao, n - 1);
 		}
@@ -77,9 +75,8 @@ public class MetodosRecursivos {
 	public double progressaoGeometrica(double termoInicial, double razao, int n) {
 		double result = termoInicial;
 		if (n == 1) {
-			return result;
 		} else {
-			result = progressaoAritmetica(termoInicial * razao, razao, n - 1);
+			result = progressaoGeometrica(termoInicial * razao, razao, n - 1);
 		}
 		return result;
 	}
