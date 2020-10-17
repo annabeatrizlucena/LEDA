@@ -28,7 +28,7 @@ public class CountingSort extends AbstractSorting<Integer> {
 					
 				}
 				
-				for(int i = leftIndex +1; i < counter.length; i++ ) {
+				for(int i = 1; i < counter.length; i++ ) {
 					counter[i] += counter[i -1];
 				}
 				
